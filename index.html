@@ -2,132 +2,166 @@
 <html lang="tr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>KimbunlarCommunity | FiveM Roleplay</title>
-  <meta name="description" content="KimbunlarCommunity — Whitelist, Serious RP, premium topluluk." />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KimbunlarCommunity | Valesa RP</title>
+  <meta name="description" content="KimbunlarCommunity / Valesa RP — sunucu tanıtımı, duyurular, sıralamalar ve Discord." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script defer src="assets/js/config.js"></script>
+  <script defer src="assets/js/app.js"></script>
 </head>
 <body>
-  <div class="bg"></div>
+  <div class="bg-flow"></div>
+  <div class="overlay"></div>
 
-  <header class="nav glass">
-    <div class="brand">
-      <div class="logo-dot"></div>
-      <div class="name">KimbunlarCommunity</div>
-      <div class="tag">GTA V • FiveM • Whitelist</div>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">
+        <img src="assets/img/logo.svg" alt="Logo" />
+        <div style="min-width:0">
+          <div class="title"><span class="js-brand">KimbunlarCommunity</span></div>
+          <div class="sub"><span class="js-subbrand">Valesa RP</span> • Developer Style</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <span class="status" title="Sunucu durumu"><span class="dot"></span> Aktif</span>
+
+        <a class="chip primary" href="index.html">Anasayfa</a>
+        <a class="chip" href="market.html">Market</a>
+
+        <div class="dropdown">
+          <a class="chip dropdown-toggle" href="#">Oyun İçi ▾</a>
+          <div class="dropdown-menu">
+            <a href="siralama.html">Ödül Sıralamaları <span>→</span></a>
+            <a href="klanlar.html">Klanlar <span>→</span></a>
+            <a href="karakterler.html">Karakterler <span>→</span></a>
+            <a href="banlananlar.html">Banlananlar <span>→</span></a>
+            <a href="item-listesi.html">Item Listesi <span>→</span></a>
+            <a href="sans-kutusu.html">Şans Kutusu <span>→</span></a>
+          </div>
+        </div>
+
+        <a class="chip" href="duyurular.html">Duyurular</a>
+        <a class="chip" href="indir.html">İndir</a>
+        <a class="chip" href="yonetim.html">Yönetim</a>
+        <a class="chip js-discord" href="#" target="_blank" rel="noopener">Discord</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="panel">
+        <h1>ONLİNE ROLEPLAY DÜNYASI</h1>
+        <p>
+          <b><span class="js-brand">KimbunlarCommunity</span></b> ile <b><span class="js-subbrand">Valesa RP</span></b>
+          evrenine hoş geldin. Mor–pembe neon tasarım, premium UI ve güçlü topluluk.
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="indir.html">ÜCRETSİZ BAŞLA</a>
+          <a class="btn" href="siralama.html">ÖDÜL SIRALAMALARI</a>
+          <a class="btn js-discord" href="#" target="_blank" rel="noopener">DISCORD’A KATIL</a>
+        </div>
+
+        <div style="margin-top:16px" class="kpi">
+          <div class="box">
+            <div class="num" id="kpiUsers">—</div>
+            <div class="label">Kullanıcı</div>
+          </div>
+          <div class="box">
+            <div class="num" id="kpiChars">—</div>
+            <div class="label">Karakter</div>
+          </div>
+          <div class="box">
+            <div class="num" id="kpiClans">—</div>
+            <div class="label">Aile / Klan</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="video">
+          <iframe id="trailer" title="Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p style="margin-top:12px;color:var(--muted);font-size:13px;line-height:1.5">
+          Trailer video ID’sini <b>assets/js/config.js</b> içindeki <b>trailerYouTubeId</b> alanından değiştir.
+        </p>
+      </div>
+    </section>
+
+    <div class="section-title">
+      <h2>Haberler & Duyurular</h2>
+      <span>Son gelişmeler</span>
     </div>
 
-    <nav class="links">
-      <a href="#features">Özellikler</a>
-      <a href="#faq">SSS</a>
-      <a href="#rules">Kurallar</a>
-    </nav>
+    <section class="grid">
+      <div class="card wide">
+        <div class="inner">
+          <div class="news-item">
+            <div class="news-badge"></div>
+            <div style="min-width:0">
+              <h3>Sunucu Açık • Aktif</h3>
+              <div class="news-meta">Bugün • Discord üzerinden anlık duyurular</div>
+              <p>Event’ler, güncellemeler ve whitelist başvuruları için Discord’a katıl.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <div class="cta">
-      <a class="btn ghost" id="discordBtn" href="#" target="_blank">Discord</a>
-      <a class="btn primary" id="applyBtn" href="#" target="_blank">Whitelist Başvurusu</a>
+      <div class="card wide">
+        <div class="inner">
+          <div class="news-item">
+            <div class="news-badge"></div>
+            <div style="min-width:0">
+              <h3>Ödül Sıralamaları Yayında</h3>
+              <div class="news-meta">Günlük / Haftalık • VC ödülleri</div>
+              <p>Sıralama sayfası FiveM API ile canlı güncellenebilir.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card full">
+        <div class="inner">
+          <h3>Hikaye</h3>
+          <p>
+            Los Santos’un neon ışıkları altında her seçim bir sonuç doğurur. Kendi hikayeni yaz:
+            aile kur, ekip büyüt, ekonomi yönet, etkinliklere katıl ve iz bırak.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-title">
+      <h2>Discord Sunucumuza Katılın</h2>
+      <span>Topluluk • Duyuru • Destek</span>
     </div>
-  </header>
 
-  <main class="wrap">
-    <section class="hero glass neon">
-      <div class="hero-left">
-        <div class="pill">Premium RP Deneyimi</div>
-        <h1>KimbunlarCommunity</h1>
-        <p>Los Santos gecelerinde <b>ciddi roleplay</b>, stabil altyapı ve güçlü topluluk.</p>
-
-        <div class="hero-cta">
-          <a class="btn primary" id="discordBtn2" href="#" target="_blank">Discord’a Katıl</a>
-          <a class="btn ghost" id="applyBtn2" href="#" target="_blank">Başvuru Gönder</a>
-        </div>
-
-        <div class="mini">
-          Ciddi RP • Adil Yönetim • Optimize • Etkinlikler
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <div class="stat glass">
-          <div class="label">Whitelist</div>
-          <div class="value">Aktif</div>
-        </div>
-        <div class="stat glass">
-          <div class="label">Uptime</div>
-          <div class="value">99.9%</div>
-        </div>
-        <div class="stat glass">
-          <div class="label">Online</div>
-          <div class="value" id="onlineVal">—</div>
-        </div>
-        <div class="note glass">
-          Buraya istersen “Trailer” veya “Galeri” ekleriz 💗
-        </div>
+    <section class="panel">
+      <p style="margin:0;color:rgba(233,231,255,.9);line-height:1.6">
+        Duyurulardan ve etkinliklerden haberdar olmak için Discord’a katılmalısın.
+      </p>
+      <div class="cta">
+        <a class="btn primary js-discord" href="#" target="_blank" rel="noopener">discord.gg/valesarp</a>
+        <a class="btn" href="yonetim.html">Yönetim Kadrosu</a>
       </div>
     </section>
 
-    <section id="features" class="section">
-      <h2>Özellikler</h2>
-      <p class="sub">Premium topluluk hissi + serious RP çizgisi.</p>
-
-      <div class="grid">
-        <div class="card glass"><h3>Whitelist & Ciddi RP</h3><p>Kaliteli rol ve net kurallar.</p></div>
-        <div class="card glass"><h3>Optimize Altyapı</h3><p>Stabil, düşük gecikmeli deneyim.</p></div>
-        <div class="card glass"><h3>Aktif Yönetim</h3><p>Hızlı destek, adil moderasyon.</p></div>
-        <div class="card glass"><h3>Ekonomi & Meslekler</h3><p>Rol bazlı ekonomi, iş zincirleri.</p></div>
-        <div class="card glass"><h3>Özel İçerikler</h3><p>Araçlar, mekanlar, kıyafetler.</p></div>
-        <div class="card glass"><h3>Etkinlikler</h3><p>Topluluk etkinlikleri ve ödüller.</p></div>
+    <footer class="footer">
+      <div class="cols">
+        <div>
+          <div style="font-weight:900;font-size:14px;margin-bottom:6px">KimbunlarCommunity</div>
+          <div class="small">Copyright © 2025 • Tüm hakları saklıdır.</div>
+        </div>
+        <div>
+          <div style="font-weight:900;font-size:13px;margin-bottom:6px">Hızlı Linkler</div>
+          <div class="small"><a href="index.html">Anasayfa</a> • <a href="indir.html">İndir</a> • <a href="market.html">Market</a> • <a href="siralama.html">Sıralamalar</a></div>
+        </div>
+        <div>
+          <div style="font-weight:900;font-size:13px;margin-bottom:6px">Kullanıcı</div>
+          <div class="small"><a href="giris.html">Giriş Yap</a> • <a href="uye-ol.html">Üye Ol</a></div>
+        </div>
       </div>
-    </section>
-
-    <section id="rules" class="section">
-      <h2>Kurallar</h2>
-      <p class="sub">Topluluk düzeni için temel kurallar.</p>
-
-      <div class="rules glass">
-        <ol>
-          <li>Metagaming & powergaming yasaktır.</li>
-          <li>RDM/VDM yasaktır.</li>
-          <li>Toxic davranış, hakaret ve trolleme yasaktır.</li>
-          <li>Bug/hile kullanımı kalıcı ban sebebidir.</li>
-          <li>İtirazlar için Discord üzerinden ticket açılır.</li>
-        </ol>
-      </div>
-    </section>
-
-    <section id="faq" class="section">
-      <h2>SSS</h2>
-      <p class="sub">Kısa ve net cevaplar.</p>
-
-      <div class="faq">
-        <details class="glass" open>
-          <summary>Whitelist nasıl alırım?</summary>
-          <p>Whitelist başvuru butonundan formu doldur. Uygun görülürse Discord’dan dönüş yapılır.</p>
-        </details>
-        <details class="glass">
-          <summary>Sunucu ciddi RP mi?</summary>
-          <p>Evet. Kurallar ve rol standardı önceliğimiz.</p>
-        </details>
-        <details class="glass">
-          <summary>Yeni başlayanlara yardım var mı?</summary>
-          <p>Evet. Rehber ve destek ekibimiz var.</p>
-        </details>
-      </div>
-    </section>
-
-    <footer class="footer glass">
-      <div>
-        <div class="foot-title">KimbunlarCommunity</div>
-        <div class="foot-sub">Premium FiveM Roleplay topluluğu.</div>
-      </div>
-      <div class="foot-links">
-        <a id="discordBtn3" href="#" target="_blank">Discord</a>
-        <a href="#">TikTok</a>
-        <a href="#">Instagram</a>
-      </div>
-      <div class="copy">© <span id="year"></span> KimbunlarCommunity</div>
     </footer>
-  </main>
-
-  <script src="script.js"></script>
+  </div>
 </body>
 </html>
